@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f3f6;
+    color: #263238;
+}
+
+.contenedor {
+    max-width: 1000px;
+    margin: 25px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+.login {
+    max-width: 450px;
+    margin-top: 90px;
+}
+
+h1 {
+    margin-top: 0;
+    color: #1e3a8a;
+}
+
+h2 {
+    margin-top: 30px;
+    color: #334155;
+}
+
+label {
+    display: block;
+    margin: 8px 0 6px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+button, .boton-secundario {
+    display: inline-block;
+    padding: 11px 16px;
+    border: 0;
+    border-radius: 6px;
+    background: #2563eb;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button:hover, .boton-secundario:hover {
+    background: #1d4ed8;
+}
+
+form button {
+    margin-top: 12px;
+}
+
+.encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.form-producto {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    align-items: end;
+    gap: 12px;
+}
+
+.form-producto button {
+    margin-bottom: 0;
+    white-space: nowrap;
+}
+
+.tabla-contenedor {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+th {
+    background: #2563eb;
+    color: white;
+}
+
+.form-cantidad {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+
+.form-cantidad input {
+    width: 75px;
+}
+
+.form-cantidad button, td form button {
+    margin-top: 0;
+}
+
+.boton-eliminar {
+    background: #dc2626;
+}
+
+.boton-eliminar:hover {
+    background: #b91c1c;
+}
+
+.total {
+    text-align: right;
+    font-size: 22px;
+    font-weight: bold;
+    color: #1e3a8a;
+}
+
+.vacio {
+    padding: 18px;
+    background: #f8fafc;
+    border-radius: 7px;
+}
+
+@media (max-width: 750px) {
+    .form-producto {
+        grid-template-columns: 1fr;
+    }
+
+    .encabezado {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .contenedor {
+        padding: 20px;
+    }
+
+    .form-cantidad {
+        flex-direction: column;
+    }
+}
