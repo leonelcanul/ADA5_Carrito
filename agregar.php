@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $precio = filter_var($_POST["precio"] ?? null, FILTER_VALIDATE_FLOAT);
     $cantidad = filter_var($_POST["cantidad"] ?? null, FILTER_VALIDATE_INT);
 
-    if ($nombre !== "" && mb_strlen($nombre) <= 100 && $precio !== false && $precio > 0 && $cantidad !== false && $cantidad > 0) {
+    if($nombre!="" && mb_strlen($nombre)<=100 && $precio!==false && $precio>0 && $cantidad!==false && $cantidad>0 && $cantidad<=10) {
         $id = uniqid("prod_", true);
         $_SESSION["carrito"][$id] = [
             "nombre" => $nombre,
